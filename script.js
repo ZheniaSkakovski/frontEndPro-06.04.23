@@ -11,3 +11,5 @@ if (math === "add") {
 } else if (math === "div") {
     alert(numberFirst / numberSecond)
 }
+
+alert("the end")
