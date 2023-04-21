@@ -1,17 +1,11 @@
-arrLength = parseInt(prompt("Enter length"));
-console.log("Length", arrLength);
-
-let arr = [];
-for(let i = 0; i < arrLength; i++) {
-    let enteredValue = prompt(`Enter #${i + 1} element of array`);
-    arr.push(enteredValue)
+function removeElement(array, item) {
+    const index = array.indexOf(item);
+    if (index > -1) {
+        array.splice(index, 1);
+    }
 }
-console.log("Filled", arr);
 
-arr.sort((a, b) => a - b);
-console.log("Sorted", arr);
+const array = [1, 2, 3, 4, 5, 6, 7];
+removeElement(array, 5);
 
-let del = arr.splice(1, 3);
-console.log("Deleted", del);
-
-console.log("Removed", arr);
+console.log(array);
